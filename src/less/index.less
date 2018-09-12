@@ -1,0 +1,177 @@
+//  头部样式
+.navbar{
+    border-radius: 0;
+    margin-bottom: 0;
+    .nav_top{
+        .navbar-right{
+
+         li{
+             
+              a{
+                  color: #fff;
+                   &:hover{
+                        color: #00a8ff;
+                        text-decoration: underline;
+                    }
+               }
+           }
+        }
+    }
+ 
+}
+.erweima {
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
+.cont_nav{
+    margin-bottom: 5px;
+    .cont_nav_hover{
+        li{
+            a{
+                font-size: 16px;
+                height: 60px;
+                line-height: 40px;
+                text-align: center;
+                &:hover{
+                background: none repeat scroll 0 0 #f0f0f0;
+                    color: #09d;
+                }
+            }
+        }
+    }
+    
+}
+
+
+//  页脚
+.el-footer{
+    img{
+        width: 160px;
+        height: 65px;
+        
+    }
+    .foot_erweima{
+            width: 160px;
+            height:160px;
+        }
+}
+
+//  轮播样式
+
+//  三大步
+.el-feature{
+    margin-top: 5px;
+    .row{
+        div{
+            background: url("../../../images/feature01.png") no-repeat 10px center;
+            &:nth-child(2){
+            background: url("../../../images/feature02.png") no-repeat 10px center;
+            }
+            &:nth-child(3){
+            background: url("../../../images/feature03.png") no-repeat 10px center;
+            }
+            dl{
+                margin-left: 80px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+// 借款
+.el_borrow{
+    .panel-heading{
+        padding: 0;
+        height: 53px;
+        border-bottom: 1px solid #ccc;
+        .pull-left{
+            line-height: 50px;
+            color: #2e8ece;
+            font-size: 2.5rem;
+            font-weight: bold;
+            border: 0px solid;
+            border-bottom-width: 3px;
+        }
+        .pull-right a{
+            display: inline-block;
+            height: 35px;
+            line-height: 25px;
+            border: 1px solid #d0d0d0;
+            border-radius: 15px;
+            padding: 5px 10px;
+            color: #2e8ece;
+            margin-top: 8px;
+            &:hover{
+                background-color: #2e8ece;
+                color: #ffffff;
+                cursor: pointer;
+            }
+        }
+    }
+    .panel-body{
+        padding: 0;
+    }
+    .table{
+        margin-bottom: 0;
+        td,th{
+            line-height: 40px;
+        }
+    }
+}
+// 新闻资讯
+.el_news{
+    .row{
+        .news{
+             .panel-heading{
+                border-bottom: 1px solid #ccc;
+                height: 50px;
+                line-height: 30px;
+                padding: 0;
+                margin-bottom: 5px;
+
+                .pull-left{
+                        line-height: 50px;
+                        color: #2e8ece;
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        border: 0 solid;
+                        border-bottom-width: 3px;
+                }
+                .pull-right{
+                    display: inline-block;
+                    height: 35px;
+                    line-height: 25px;
+                    border: 1px solid #d0d0d0;
+                    border-radius: 15px;
+                    padding: 5px 10px;
+                    color: #2e8ece;
+                    margin-top: 8px;
+                    a:hover{
+                        color: #ffffff;
+                    }
+                    &:hover{
+                        background-color: pink;
+                        color: #ffffff;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+            .panel-body{
+                padding: 0;
+                li{
+                    height: 38px;
+                    line-height: 38px;
+                    a{
+                        &:hover{
+                            color:#23527c;
+                        }
+                    }
+                }
+            }
+       
+        }
+    }
+    
+}
