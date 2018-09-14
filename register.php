@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>注册</title>
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
-       <link rel="stylesheet" href="./libs/bootstrapvalidator/dist/css/bootstrapvalidator.min.css">
+       <!-- <link rel="stylesheet" href="./libs/bootstrapvalidator/dist/css/bootstrapvalidator.min.css"> -->
+       <link rel="stylesheet" href="./libs/bootstrapvalidator/dist/css/bootstrapValidator.min.css">
     <link rel="stylesheet" href="./dist/css/minCss/common.min.css">
     <link rel="stylesheet" href="./dist/css/minCss/index.min.css">
     <link rel="stylesheet" href="./dist/css/minCss/login.min.css">
@@ -18,7 +19,7 @@
     <!-- 导航 -->
     <header class="el-topbar">
         <?php
-               require_once('topNav.php');
+        require_once('topNav.php');
         ?>
         <!-- 内容导航 -->
         <div class="cont_nav">
@@ -53,31 +54,31 @@
                  <form action="" method="POST"  id="regForm">
                     <div class="row">
                         <label class="col-sm-4 col-xs-3  text-right" style='line-height:35px;'>用户名</label>
-                        <div class="col-sm-3  col-xs-7 form-group">
+                        <div class=" col-sm-3  col-xs-7  form-group">
                             <input type="text" class="form-control" name="username" placeholder="请输入用户名" />
                         </div>
                     </div>
                     <div class="row">
                         <label class="col-sm-4 col-xs-3 text-right" style='line-height:30px;'>密&emsp;码</label>
-                        <div class="col-sm-3 col-xs-7 form-group">
+                        <div class=" col-sm-3 col-xs-7  form-group">
                             <input type="text" class="form-control" name="password"/>
                         </div>
                     </div>
                      <div class="row">
                         <label class="col-sm-4 col-xs-3 text-right" style='line-height:30px;'>确认密码</label>
-                        <div class="col-sm-3 col-xs-7 form-group">
+                        <div class=" col-sm-3 col-xs-7  form-group">
                             <input type="text" class="form-control" name="repeatPassword"/>
                         </div>
                     </div>
                      <div class="row">
                         <label class="col-sm-4 col-xs-3 text-right" style='line-height:30px;'>电话</label>
-                        <div class="col-sm-3 col-xs-7 form-group">
+                        <div class=" col-sm-3 col-xs-7  form-group">
                             <input type="text" class="form-control" name="mobile"/>
                         </div>
                     </div>
                      <div class="row">
                         <label class="col-sm-4 col-xs-3 text-right" style='line-height:30px;'>邮件</label>
-                        <div class="col-sm-3 col-xs-7 form-group">
+                        <div class=" col-sm-3 col-xs-7  form-group">
                             <input type="text" class="form-control" name="email"/>
                         </div>
                     </div>
@@ -96,7 +97,8 @@
                             <a href="#" class="new pull-left">已有账号，马上登录</a>
                         </div>
                     </div>
-            </form>
+                  
+                </form>
             </div>
         </div>
     </section>
@@ -105,17 +107,17 @@
    </section>
 <!-- 页脚 -->
 <?php
-               require_once('footer.php');
-        ?>
+require_once('footer.php');
+?>
 
 
 
     <script src="./libs/jquery/jquery.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
     <!-- <script src="./libs/bootstrapvalidator/dist/jsbootstrapvalidator.min.js"></script> -->
-     <script src="./lib/bootstrapValidator/dist/js/bootstrapValidator.min.js"></script>
+     <script src="./libs/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
     <script src="./dist/js/index.min.js"></script>
     <script src="./dist/js/regLogin.min.js"></script>
 </body>
-
 </html>
+

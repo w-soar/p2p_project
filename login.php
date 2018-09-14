@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登录</title>
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/bootstrapvalidator/dist/css/bootstrapValidator.min.css">
     <link rel="stylesheet" href="./dist/css/minCss/common.min.css">
     <link rel="stylesheet" href="./dist/css/minCss/index.min.css">
     <link rel="stylesheet" href="./dist/css/minCss/login.min.css">
@@ -17,7 +18,7 @@
     <!-- 导航 -->
     <header class="el-topbar">
         <?php
-               require_once('topNav.php');
+        require_once('topNav.php');
         ?>
         
         <!-- 内容导航 -->
@@ -50,45 +51,43 @@
                     <div class="col-sm-4 "></div>
                     <div class="col-sm-3 login_tit"  > 请输入用户名和密码</div>
                 </div>
-                 <form action="" method="POST" role="form" id="form-test">
-                <div class="row">
-                    <div class="col-sm-4 col-xs-3  text-right" style='line-height:35px;'>用户名</div>
-                    <div class="col-sm-3  col-xs-7 form-group">
-                        <input type="text" class="form-control" id="userName">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4 col-xs-3 text-right" style='line-height:30px;'>密&emsp;码</div>
-                    <div class="col-sm-3 col-xs-7 form-group">
-                        <input type="text" class="form-control" id="passWord">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-5 col-xs-4"></div>
-                    <div class="col-sm-4 col-xs-8 form-group">
-                        <input type="button" class=" btn btn-success pull-left" value="登录">
-                        <a href="#" class="new pull-left">新用户，马上注册</a>
+                 <form action="" method="POST" role="form" id="loginForm">
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-3  text-right" style='line-height:35px;'>用户名</div>
+                            <div class="col-sm-3  col-xs-7 form-group">
+                                <input type="text" class="form-control" name="userName">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-3 text-right" style='line-height:30px;'>密&emsp;码</div>
+                            <div class="col-sm-3 col-xs-7 form-group">
+                                <input type="text" class="form-control" name="passWord">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-4"></div>
+                            <div class="col-sm-4 col-xs-8 form-group">
+                                <input type="submit" class=" btn btn-success pull-left" value="登录">
+                                <a href="#" class="new pull-left">新用户，马上注册</a>
 
-                    </div>
-                </div>
-            </form>
+                            </div>
+                        </div>
+               </form>
             </div>
         </div>
     </section>
 
 <!-- 页脚 -->
 <?php
-               require_once('footer.php');
- ?>
-
-
-
-
-
+require_once('footer.php');
+?>
 
     <script src="./libs/jquery/jquery.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./libs/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
     <script src="./dist/js/index.min.js"></script>
+    <script src="./dist/js/regLogin.min.js"></script>
+
 </body>
 
 </html>
