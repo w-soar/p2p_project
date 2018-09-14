@@ -55,7 +55,7 @@
                         <div class="row">
                             <div class="col-sm-4 col-xs-3  text-right" style='line-height:35px;'>用户名</div>
                             <div class="col-sm-3  col-xs-7 form-group">
-                                <input type="text" class="form-control" name="userName">
+                                <input type="text"  class="form-control" name="userName">
                             </div>
                         </div>
                         <div class="row">

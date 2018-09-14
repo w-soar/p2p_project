@@ -22,9 +22,15 @@ $(function () {
                         },
                         //长度
                         stringLength: {
-                            min: 6, //最小
+                            min: 3, //最小
                             max: 12, //最大
-                            message: '用户名长度必须在6~12位之间'
+                            message: '用户名长度必须在3~12位之间'
+                        },
+                        remote:{
+                            url:'mysqlVerify.php',
+                            message:'用户已存在',
+                            delay :  10,
+                            type: 'POST'
                         }
                     }
                 },
@@ -114,16 +120,15 @@ $(function () {
             var bv = $form.data('bootstrapValidator');
 
             // Use Ajax to submit form data
-            $.post($form.attr('action'), $form.serialize(), function (result) {
-                console.log(result);
-            }, 'json');
+            $.post($form.attr('action'), $form.serialize(), function (data) {
+            //    console.log(data);
+            // eval(data);
+            alert('添加成功!')
+            });
         });
-
-
-
 });
 
-
+//  登录
 
 $(function(){
     $('#loginForm')

@@ -39,7 +39,7 @@
             </nav>
         </div>
     </header>
-   <section>
+  
      <section class="el-main container">
         <div class="panel panel-default ">
             <div class="panel-heading">
@@ -51,11 +51,11 @@
                     <div class="col-sm-3 "></div>
                     <div class="col-sm-4 login_tit"  > 请填写注册信息，点击“提交注册”即可完成注册！</div>
                 </div>
-                 <form action="" method="POST"  id="regForm">
+                 <form action="usersReg.php" method="POST"  id="regForm">
                     <div class="row">
                         <label class="col-sm-4 col-xs-3  text-right" style='line-height:35px;'>用户名</label>
                         <div class=" col-sm-3  col-xs-7  form-group">
-                            <input type="text" class="form-control" name="username" placeholder="请输入用户名" />
+                            <input type="text" class="form-control" data-bv-trigger='blur' name="username" placeholder="请输入用户名" />
                         </div>
                     </div>
                     <div class="row">
@@ -97,14 +97,11 @@
                             <a href="#" class="new pull-left">已有账号，马上登录</a>
                         </div>
                     </div>
-                  
                 </form>
             </div>
         </div>
     </section>
-
-
-   </section>
+  
 <!-- 页脚 -->
 <?php
 require_once('footer.php');
