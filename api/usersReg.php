@@ -1,5 +1,5 @@
 <?php
-include_once('./common.php');
+include_once('../common.php');
  
 //    连接数据库
 $link = mysqli_connect('localhost', 'root', 'root', 'finance', 3306);
@@ -16,13 +16,21 @@ $sql = "insert into reg (username,password,repeatPassword,mobile,email) values('
 //  操作
 $rst = mysqli_query($link, $sql);
 
-// echo $rst;
-if (!$rst) {
-    echo '失败!!!!';
-} else {
-    echo "<script>;location.href='./login.php';</script>";
-    // echo "alert('添加成功!');location.href='./login.php';";
+if($rst){
+    $rstArr=['isSuccess'=>true,'msg'=>'成功yeah~~~'];
+    echo json_encode($rstArr);
+}else{
+    $rstArr=['isSuccess=>false','msg'=>'成功yeah~~~'];
+    echo json_encode($rstArr);
 }
+
+// echo $rst;
+// if (!$rst) {
+//     echo '失败!!!!';
+// } else {
+//     echo "<script>;location.href='./login.php';</script>";
+//     // echo "alert('添加成功!');location.href='./login.php';";
+// }
 
 
 

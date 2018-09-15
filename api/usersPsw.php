@@ -1,5 +1,5 @@
 <?php
-require_once('common.php');
+require_once('../common.php');
 
 //    连接数据库
 $link = mysqli_connect('localhost', 'root', 'root', 'finance', 3306);

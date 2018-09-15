@@ -51,7 +51,7 @@
                     <div class="col-sm-3 "></div>
                     <div class="col-sm-4 login_tit"  > 请填写注册信息，点击“提交注册”即可完成注册！</div>
                 </div>
-                 <form action="usersReg.php" method="POST"  id="regForm">
+                 <form  method="POST"  id="regForm">
                     <div class="row">
                         <label class="col-sm-4 col-xs-3  text-right" style='line-height:35px;'>用户名</label>
                         <div class=" col-sm-3  col-xs-7  form-group">
@@ -106,6 +106,26 @@
 <?php
 require_once('footer.php');
 ?>
+
+  <!-- 蒙层的html结构 -->
+  <div class="modal fade" id="msgShowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="msgShowTitle">注册成功</h4>
+        </div>
+        <div class="modal-body" id="msgShowContent">
+            进入登录页面~~
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id='save'>确认</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
 
 
 

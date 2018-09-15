@@ -51,7 +51,7 @@
                     <div class="col-sm-4 "></div>
                     <div class="col-sm-3 login_tit"  > 请输入用户名和密码</div>
                 </div>
-                 <form action="" method="POST" role="form" id="loginForm">
+                 <form  method="POST" role="form" id="loginForm">
                         <div class="row">
                             <div class="col-sm-4 col-xs-3  text-right" style='line-height:35px;'>用户名</div>
                             <div class="col-sm-3  col-xs-7 form-group">
@@ -81,6 +81,30 @@
 <?php
 require_once('footer.php');
 ?>
+
+   <!-- 蒙层的html结构 -->
+   <div class="modal fade" id="msgShowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="msgShowTitle">标题</h4>
+        </div>
+        <div class="modal-body" id="msgShowContent">
+            内容
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
 
     <script src="./libs/jquery/jquery.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
