@@ -13,6 +13,12 @@ $arr = mysqli_fetch_assoc($rst);
   
 
 if($arr!=null){
+    //   session 对象
+    // 初始化session
+    session_start();
+    $_SESSION['username']=$arr['username'];
+    $_SESSION['id']=$arr['id'];
+
     $rstArr=['isSuccess'=>true,'msg'=>'成功yeah~~~'];
     echo json_encode($rstArr);
 }else{

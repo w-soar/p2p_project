@@ -14,6 +14,8 @@
 
 </head>
 
+
+
 <body>
     <!-- 导航 -->
     <header class="el-topbar">
@@ -69,7 +71,6 @@
                             <div class="col-sm-4 col-xs-8 form-group">
                                 <input type="submit" class=" btn btn-success pull-left" value="登录">
                                 <a href="#" class="new pull-left">新用户，马上注册</a>
-
                             </div>
                         </div>
                </form>
@@ -101,12 +102,7 @@ require_once('footer.php');
     </div>
 
 
-
-
-
-
-
-    <script src="./libs/jquery/jquery.min.js"></script>
+<script src="./libs/jquery/jquery.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="./libs/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
     <script src="./dist/js/index.min.js"></script>
