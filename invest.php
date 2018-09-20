@@ -7,116 +7,163 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我要投资</title>
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./libs/JqueryPagination/jquery.pagination.css">
     <link rel="stylesheet" href="./dist/css/minCss/common.min.css">
     <link rel="stylesheet" href="./dist/css/minCss/index.min.css">
+
 </head>
+
 <body>
     <!-- 导航 -->
     <header class="el-topbar">
-        <nav class="navbar  navbar-default navbar-inverse">
-            <div class="container-fluid nav_top ">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                            aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">
-                            <span class="glyphicon glyphicon-phone-alt"></span>
-                            <i>028-86261949</i>
-                        </a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <!-- 登录以后  -->
-                            <li><a href="#">首页</a></li>
-                            <li><a href="#">某某</a></li>
-                            <li><a href="#">赶快充值</a></li>
-                            <li><a href="#">注销</a></li>
-                            <li><a href="#">帮助</a></li>
-                            <li class="erweima"><a href="#" class="" data-toggle="tooltip" data-placement="bottom"
-                                    data-html='true' title="<img  src='./images/contract.png'/>"> 联系客服
-                                </a></li>
-                            <!--  未登录 -->
-                            <!-- <li><a href="#">登录</a></li>
-                            <li><a href="#">快速注册</a></li>
-                            <li><a href="#">帮助</a></li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <?php
+        require_once('topNav.php');
+        ?>
         <!-- 内容导航 -->
-        <div class="cont_nav">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="container cont_nav_hover">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
-                        </div>
-                        <ul class="nav navbar-nav">
-                            <li ><a href="#">首页</a></li>
-                            <li class="active"><a href="#">我要投资</a></li>
-                            <li><a href="#">我要借款</a></li>
-                            <li><a href="#">个人中心</a></li>
-                            <li><a href="#">新手指引</a></li>
-                            <li><a href="#">关于我们</a></li>
-                        </ul>
-                        <!-- </div>/.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
-                </div>
-            </nav>
-        </div>
+        <?php
+        require_once('header.php');
+        ?>
     </header>
-
-
-    <!--  内容 -->
-    <section class="container">
-      <div>
+    <!-- 轮播 -->
+    <div class="container">
         <h4 class="page-title">投资列表</h4>
-        
-      </div>
-      
-    </section>
-
-
-<!-- 页脚 -->
-    <footer class="el-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-xs-12">
-                    <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
-                    <p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
-                    <p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
-                    <p>电  话： 028-86261949 / 400-808-6840  邮箱： yuandaima@itsource.cn</p>
-                    <p><a href="http://www.miitbeian.gov.cn">蜀ICP备14030149号-1</a> 
-                        <a href="http://www.gaj.chengdu.gov.cn">蜀公网安备510114990541</a></p>
-                </div>
-                <div class="col-md-2">
-                    <p> 官方微博 </p>
-                    <img src="./images/sina.png" alt="">
-                    <img src="./images/tecent.png" alt="">
-                </div>
-                <div class="col-md-2 col-xs-12">
-                    <p>官方微信</p>
-                    <img class="foot_erweima" src="./images/wx.jpg" alt="">
+        <form action="invest_list.html" id="searchForm">
+            <div style="margin: 20px 0px;">
+                <span class="text-muted">标的状态</span>
+                <div style="margin-left: 30px" class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                        <input type="radio" name="bidRequestState" value="-1" autocomplete="off" checked />&emsp;全部&emsp;
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="bidRequestState" value="2" autocomplete="off" />&emsp;招标中&emsp;
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="bidRequestState" value="8" autocomplete="off" />&emsp;还款中&emsp;
+                    </label>
                 </div>
             </div>
+        </form>
+        <table class="table el-table table-hover">
+            <thead id="gridHead">
+                <tr>
+                    <th>借款人</th>
+                    <th width="180px">借款标题</th>
+                    <th>年利率</th>
+                    <th>金额</th>
+                    <th>还款方式</th>
+                    <th>进度</th>
+                    <th width="80px">操作</th>
+                </tr>
+            </thead>
+            <tbody id="gridBody">
+
+            </tbody>
+        </table>
+        <!-- 此处是分页插件  4. 拷贝页面结构-->
+        <div style="text-align: center;">
+            <div id="page" class="m-pagination"></div>
         </div>
-    </footer>
+    </div>
 
 
+
+    <?php
+require_once('footer.php');
+?>
 
 
     <script src="./libs/jquery/jquery.min.js"></script>
+    <script src="./libs/jqueryTemplate/jquery.tmpl.js"></script>
+    <script src="./libs/JqueryPagination/jquery.pagination-1.2.7.min.js"></script>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="./dist/js/index.min.js"></script>
+    <script id="borrowTmpl" type="text/html">
+        <tr>
+            <td>zs</td>
+            <td>${borrowTitle}</td>
+            <td class="text-info">${currentRate}%</td>
+            <td class="text-info">${borrowAmount}</td>
+            <td>${repayment}</td>
+            <td>100.00%</td>
+            <td><a class="btn btn-danger btn-sm" href="borrow_info.html?id=7">查看</a></td>
+		</tr>
+    </script>
+    <script>
+        //5. 配置插件的参数
+        $("#page").page({
+            debug: true, //开启调试
+            showInfo: true, //显示调试信息
+            pageSize: 5, //定义每页的数据条数
+            showJump: true, //开启跳转功能
+            showPageSizes: true, //用户自定义每页大小
+            remote: {
+                //请求数据的地址
+                url: './api/borowwAll.php', //请求的数据
+                //请求成功的回调函数
+                success: function (data) {
+                    console.log("获取api回来的数据", data);
+                           //渲染模板
+                      var htmlStr=$("#borrowTmpl").tmpl(data.list);
+                       //把渲染后的结果更新到页面
+                 $("#gridBody").html(htmlStr);
+
+                   
+                    //$("#eventLog").append(' remote callback : ' + JSON.stringify(data) + '<br />');
+                }
+            }
+        });
+
+        $("#page").on("pageClicked", function (event, pageIndex) {
+            //$("#eventLog").append('EventName = pageClicked , pageIndex = ' + pageIndex + '<br />');
+        }).on('jumpClicked', function (event, pageIndex) {
+            //$("#eventLog").append('EventName = jumpClicked , pageIndex = ' + pageIndex + '<br />');
+        }).on('pageSizeChanged', function (event, pageSize) {
+            //$("#eventLog").append('EventName = pageSizeChanged , pageSize = ' + pageSize + '<br />');
+        });
+
+        //   $("#page").page({
+        //             debug: true,
+        //             showInfo: true,
+        //             showJump: true,
+        //             showPageSizes: true,
+        //             remote: {
+        //                 url: './api/borowwAll.php',
+        //                 success: function (data) {
+        //                     console.log(data);
+
+        //                     //渲染模板
+        //                    var htmlStr=$("#borrowTmpl").tmpl(data.list);
+        //                     //把渲染后的结果更新到页面
+        //                     $("#gridBody").html(htmlStr);
+
+
+        //                     // var rstStr = '';
+        //                     // for(i=0;i<data.length;i++){
+        //                     //     rstStr += ` <tr>
+        //                     //                 <td>zs</td>
+        //                     //                 <td>${data[i].borrowTitle}</td>
+        //                     //                 <td class="text-info">${data[i].currentRate}%</td>
+        //                     //                 <td class="text-info">${data[i].borrowAmount}</td>
+        //                     //                 <td>${data[i].repayment}</td>
+        //                     //                 <td>100.00%</td>
+        //                     //                 <td><a class="btn btn-danger btn-sm" href="borrow_info.html?id=7">查看</a></td>
+        //                     //                 </tr>   `
+        //                     // }
+        //                     // // $("#eventLog").append(' remote callback : ' + JSON.stringify(data) + '<br />');
+        //                     // console.log(rstStr);
+        //                     // $('gridBody').html(rstStr);
+        //                 }
+        //             }
+        //         });
+        //         $("#page").on("pageClicked", function (event, pageIndex) {
+        //             //$("#eventLog").append('EventName = pageClicked , pageIndex = ' + pageIndex + '<br />');
+        //         }).on('jumpClicked', function (event, pageIndex) {
+        //             //$("#eventLog").append('EventName = jumpClicked , pageIndex = ' + pageIndex + '<br />');
+        //         }).on('pageSizeChanged', function (event, pageSize) {
+        //             //$("#eventLog").append('EventName = pageSizeChanged , pageSize = ' + pageSize + '<br />');
+        //         });
+    </script>
 </body>
 
 </html>

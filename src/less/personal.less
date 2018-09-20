@@ -4,13 +4,13 @@
             a {
                 font-size: 14px !important;
                 &:hover {
-                    color: pink !important;
+                    color: #fff !important;
                     text-decoration: none;
                 }
             }
         }
-        .panel-body{
-            li{
+        .panel-body {
+            li {
                 padding-left: 30px;
                 line-height: 35px;
             }
@@ -20,14 +20,13 @@
 
 .panel-default>.panel-heading {
     color: #337ab7 !important;
-    background-color: gold !important;
+    background-color: pink !important;
     border-color: #ccc !important;
 }
-.panel-group .panel+.panel{
-    margin-top: 0;
-}
-.panel{
-    border-top:none;
+
+.panel {
+    border-top: none;
+    marin-top: 20px;
 }
 
 // 个人中心 信息
@@ -68,12 +67,18 @@
     }
     /*认证信息*/
     .el-authInfo {
-        margin-top: 20px;
-        row {
-            height: 120px;
+        .el-cont {
+            // margin-top: 15px;
+            margin-left: 10px;
+            h5 {
+                margin: 0 0 5px 0;
+            }
         }
-        div {
-            margin-top: 15px;
+        .emp {
+            margin: 5px 0 0 0;
+        }
+        .col-sm-4 {
+            margin-top: 40px;
         }
     }
 }
@@ -96,3 +101,46 @@
     }
 }
 
+@media(max-width:767px) {
+    .el-cont {
+        margin-top: 15px;
+    }
+    .navbar-offcanvas {
+        // position: absolute;
+        // height: 0;
+        // top: -210px!important;
+    }
+}
+
+.el-borrow {
+    .bold {
+        font-weight: bold;
+    }
+    .font18 {
+        font-size: 19px;
+    }
+    .btn {
+        border-radius: 20px;
+        background-color: rgba(68, 163, 241, 0.6);
+    }
+    .panel-body {
+        background-color: rgba(255, 159, 188, 0.1);
+    }
+    .mgb20 {
+        margin-bottom: 20px;
+    }
+}
+
+.el-borr-apply {
+    .el-tip-info {
+        padding: 20px;
+        background-color: #F4F8FA;
+        border-left: 2px solid #0099DD;
+        margin-bottom: 20px;
+    }
+    .page-header {
+        padding-bottom: 9px;
+        margin: 40px 0 20px;
+        border-bottom: 1px solid #eee;
+    }
+}

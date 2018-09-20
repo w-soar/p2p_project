@@ -19,7 +19,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <!-- 登录以后  -->
-                            <li class='isAppend'><a href="#">首页</a></li>
+                            <li id='isAppend'><a href="index.php">首页</a></li>
                             <!-- 登录后 -->
 
                              <!--  未登录 -->
@@ -42,21 +42,19 @@
         
     $.ajax({
         type:'get',
-        type:'get',
         url:'./api/sessionState.php',
         dataType:'json',
         success:function(data){
-            // console.log(data);
             if(data.isSuccess){
                 var str= `<li><a href="#">${data.username}</a></li>
                           <li><a href="#">赶快充值</a></li>
                           <li><a href="./api/loginOut.php">注销</a></li>`;
-                  $('.isAppend').after(str);
+                  $('#isAppend').after(str);
 
             }else{
                 var str= `<li><a href="./login.php">登录</a></li>
                           <li><a href="./register.php">快速注册</a></li>`;
-                  $('.isAppend').after(str);
+                  $('#isAppend').after(str);
             }    
 
         }
